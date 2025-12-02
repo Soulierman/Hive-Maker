@@ -1,0 +1,175 @@
+body{
+  background-color: #ffbd42;
+}
+header{
+  font-family: "Source Sans 3";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header p, header a{
+  font-family: "Source Sans 3";
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+  display: flex;
+  height: 100vh;
+}
+#SubmissionForm{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll;
+}
+#main {
+  overflow-y:scroll;
+  width: 75vw;
+  height: 100vh;
+  display: flex;
+  height:100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.keeper{
+    font-family: "Source Sans 3";
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    background-color: #e9763d;
+    border-radius: 25px;
+    height:100vh;
+    justify-content: space-around;
+}
+.card > div,#UserForm > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hiveTeam,.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#bearSelector{
+  display: flex;
+  flex-direction: row;
+}
+.card{
+  font-family: "Source Sans 3";
+  width: 15vw;
+  height: 20vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid black;
+  background-color: #cc5d01;
+  border-radius: 25px;
+}
+input[type=text],input[type=number]{
+  border-radius: 25px;
+}
+#beeNum{
+  max-width: 20%;
+}
+.submission{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width:85vw;
+  margin-bottom: 15vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 3vw;
+  border-radius: 25px;
+  border: 4px solid black;
+}
+#adminPage{
+  font-family: "Source Sans 3";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100vw;
+}
+#submissionCarousel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#submissionCarousel button{
+  height: 10vh;
+  width: 12vh;
+  font-size: 5vh;
+  border-radius: 25%;
+  background-color: #c06f2d;
+}
+#adminTitle{
+  text-align: center;
+  font-size: 3em;
+}
+.keeperTitle{
+  font-weight: bold;
+}
+.keeper img{
+  border: 2px solid black;
+}
+#adminKeeper{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:25vh;
+  font-size: x-large;
+}
+#adminKeeper div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:100%
+}
+#cardContainer{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width:100%;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+@media only screen and (max-width: 950px) {
+  main{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #SubmissionForm{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  #main{
+    width: 100%;
+    overflow-y:visible;
+  }
+  #form{
+    width:100%;
+    margin-bottom: 5%;
+  }
+  #UserForm{
+    width: fit-content;
+  }
+  .card{
+    width: 100%;
+    height: 60vh;
+  }
+}

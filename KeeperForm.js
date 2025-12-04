@@ -1,6 +1,6 @@
 import { html } from "preact";
-import InputWithLabel from "./Inputs.js";
 import { useState } from "preact";
+import InputWithLabel from "./Inputs.js";
 
 function validate(){
     const submissionForm = document.getElementById("SubmissionForm");
@@ -50,8 +50,9 @@ function KeeperForm({cardNum,setCardNum,setPage,setUserSubmission}){
             </section>`
 }
 function KeeperNameInput(){
+    const [name,setName] = useState("");
     return html `<div>
-        <${InputWithLabel} id=name labelText=Name type=text name=name required=required/>
+        <${InputWithLabel} id=name labelText=Name type=text name=name required=required value=${name} onInput=${e => setName(e.target.value)}/>
     </div>`
 }
 function BearSelector(){
@@ -69,8 +70,9 @@ function BearImg({ index }){
     return html `<img src="assets/bears/0${index}.png" id="bearImg" />`
 }
 function KeeperAgeInput(){
+    const [age,setAge] = useState(0);
     return html `<div>
-        <${InputWithLabel} id=age labelText=Age type=number name=age min=0 max=120 required=required/>
+        <${InputWithLabel} id=age labelText=Age type=number name=age min=0 max=120 required=required value=${age} onInput=${e => setAge(e.target.value)}/>
     </div>`
 }
 function HiveTypeSelector(){
@@ -89,7 +91,7 @@ function HiveTypeRadio({name}){
 }
 function BeeNumInput({cardNum, setCardNum}){
     return html `<${InputWithLabel} id=beeNum labelText="How many bees do you have?"
-    type=number name=beeNumber min=1 max=10 onInput=${e => setCardNum(Number(e.target.value))}
+    type=number name=beeNumber min=1 max=10 onInput=${e => e.target.value >= 0 && e.target.value <= 10 ? setCardNum(Number(e.target.value)) : ""}
     value=${cardNum}/>`
 }
 export default KeeperForm;

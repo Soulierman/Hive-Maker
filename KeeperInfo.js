@@ -1,7 +1,6 @@
 import { html } from "preact";
 import { updateBearBackground } from "./Resolving.js";
 
-
 function KeeperInfo({keeperData}){
   return html`<section class=keeper id=adminKeeper style="background-image:${updateBearBackground(keeperData.bear)}">
         <div class=keeperTitle>
